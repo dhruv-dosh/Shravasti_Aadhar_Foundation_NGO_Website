@@ -265,7 +265,7 @@ nav {
 /* Media Query for extra small devices (phones) */
 @media (max-width: 480px) {
     .team img {
-        width: 30vh;
+        width: 28vh;
         height: 30vh;
         border-radius: 50%;
     }
@@ -427,6 +427,14 @@ footer {
         justify-content: center;
         display: none;
     }
+    .about{
+        margin-top: 20vh;
+        height: 50vh;
+        padding: 10px;
+    }
+    .contact-container{
+        padding: 30px;
+    }
 
     .nav-links.active {
         display: flex;
@@ -462,6 +470,10 @@ footer {
 
     .donate-container h2 {
         font-size: 2rem;
+    }
+    .donate-container{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
     }
 }
 
