@@ -1,0 +1,496 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo img {
+    max-width: 100px; /* Adjust size */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0a5e1c;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    background-color: #0a5e1c;
+    padding: .5rem;
+    border-radius: 20px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+/* Responsive Styles for the Nav */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        transition: 0.5s ease;
+    }
+
+    .nav-links.active {
+        display: flex;
+        z-index: 20;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+    .nav-links a {
+        color: #fff;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Home Section */
+.home {
+    position: relative;
+    background: url('images/background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 150vh;
+    margin: 0 auto;
+}
+
+.home-content h2 {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+}
+
+.home-content .btn {
+    background-color: #0a5e1c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.home-content .btn:hover {
+    background-color: #ffd700;
+    color: #0a5e1c;
+}
+
+.about {
+    text-align: center;
+    /* padding: 50px; */
+    z-index: 1;
+    height: 60vh;
+}
+
+.aboutcard {
+    margin-top: 40px;
+    border-radius: 40px;
+    background-color: #0a5e1c65;
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* About, Projects, Team, Contact, Donate Sections */
+.about, .projects, .team, .donate {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.donate-container{
+    text-align: center;
+    padding:2rem 0 2rem 0;
+}
+
+.about p, .projects p, .team p, .contact p, .donate p {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Projects Section */
+.project-list {
+    display: flex;
+    justify-content: center; /* or use space-between depending on desired layout */
+    gap: 1rem;
+    max-width: 100vh; /* Use percentage for width */
+    margin: 0 auto; /* Center the project list */
+    padding: 0 1rem; /* Add padding to avoid the content touching the edges */
+    box-sizing: border-box; /* Ensure padding is included in element's total width */
+}
+
+
+.project-item {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img{
+    width: 60vh;
+    height: auto;
+}
+
+.project-item h3 {
+    color: #0a5e1c;
+}
+
+/* Team Section */
+.team {
+    height: 100vh;
+    background-color: #2c2c2c;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+/* Styles for the image */
+.team img {
+    width: 50vh;
+    height: 60vh;
+    border-radius: 20px;
+}
+
+/* Styles for the text container */
+.team div {
+    background-color: #555;
+    padding: 5vh;
+    border-radius: 0 20px 20px 0;
+    max-width: 600px;
+}
+
+/* Media Query for small devices (tablets, phones) */
+@media (max-width: 768px) {
+    .team {
+        flex-direction: column; /* Stack the content vertically */
+        padding: 10px;
+        text-align: center;
+    }
+
+    .team img {
+        width: 40vh;
+        height: 50vh;
+        margin-bottom: 20px; /* Adds spacing between image and text */
+    }
+
+    .team div {
+        padding: 3vh;
+        border-radius: 20px;
+        max-width: 100%;
+    }
+}
+
+/* Media Query for extra small devices (phones) */
+@media (max-width: 480px) {
+    .team img {
+        width: 30vh;
+        height: 30vh;
+        border-radius: 50%;
+    }
+
+    .team div {
+        padding: 2vh;
+        background-color: #33333300;
+    }
+}
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #2c2c2c;
+    padding: 100px;
+    color: #fff;
+}
+
+.contact-info, .contact-form {
+    width: 45%;
+    padding: 20px;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+}
+
+.contact-info ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    background-color: #3b3b3b;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+.contact-form button {
+    background-color: #555;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #444;
+}
+
+/* Donation Section */
+.donate-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.donate-container h2 {
+    font-size: 2.5rem;
+}
+
+.donation-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.donate-container ul{
+    text-align: left;
+}
+
+.donation-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.donation-form input, .donation-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.donate-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.donate-btn:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #0a5e1c;
+    color: #fff;
+    text-align: center;
+    padding: .2rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 30;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .donate-container {
+        padding: 20px;
+    }
+
+    .home-content h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    .project-item img{
+        width: 50vh;
+        height: auto;
+    }
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-content {
+        margin: 0 20px;
+    }
+
+    .home-content h2 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1.2rem;
+    }
+
+    .donate-container h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        height: 100vh;
+    }
+
+    .home-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .about p, .projects p, .team p, .contact p, .donate p {
+        width: 95%;
+    }
+
+    .project-item {
+        width: 100%;
+    }
+    .project-item img{
+        width: 40vh;
+        height: auto;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
