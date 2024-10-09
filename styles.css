@@ -45,13 +45,12 @@ nav {
     text-decoration: none;
     color: #0a5e1c;
     font-size: 16px;
-    transition: color 0.5s ease;
 }
 
 .nav-links a:hover {
     color: #fff;
     background-color: #0a5e1c;
-    transition: 0.3s ease-in-out;
+    transition: 0.1s ease-in-out;
     padding: .5rem;
     border-radius: 20px;
 }
@@ -320,6 +319,8 @@ nav {
         background-color: #33333300;
     }
 }
+
+
 
 /* Contact Section */
 .contact-container {

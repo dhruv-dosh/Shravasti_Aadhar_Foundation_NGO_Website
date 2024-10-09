@@ -31,16 +31,18 @@ body {
     height: 23px; /* Adjust logo size as needed */
 }
 
+.go-back {
+    text-decoration: none;
+    color: #0a5e1c; /* Color for the Go Back link */
+    font-weight: bold;
+}
+
 .go-back:hover {
     text-decoration: none;
     background-color: #0a5e1c;
     color: #fff;
     padding: .1rem .5rem;
     border-radius: 20px;
-}
-
-.go-back:hover {
-    text-decoration: underline; /* Underline on hover */
 }
 
 /* Add some padding to the body to prevent content from being hidden behind the navbar */
