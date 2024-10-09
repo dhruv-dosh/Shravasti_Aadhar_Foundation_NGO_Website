@@ -191,7 +191,7 @@ nav {
     padding:2rem 0 2rem 0;
 }
 
-.about p, .projects p, .team p, .contact p, .donate p {
+.about p, .projects p, .team p, .donate p {
     width: 80%;
     margin: 0 auto;
     line-height: 1.8;
