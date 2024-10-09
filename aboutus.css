@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white;
+}
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Background color of the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Spacing inside the navbar */
+}
+
+.logo {
+    width: 70px;
+    height: 23px; /* Adjust logo size as needed */
+}
+
+.go-back {
+    text-decoration: none;
+    color: #007bff; /* Color for the Go Back link */
+    font-weight: bold;
+}
+
+.go-back:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Add some padding to the body to prevent content from being hidden behind the navbar */
+body {
+    padding-top: 20px; /* Adjust according to navbar height */
+}
+
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 10vh;
+    padding: 20px;
+    background: white;
+    /* border-radius: 8px; */
+    box-shadow: none; /* You can uncomment this if you want a shadow */
+}
+
+h1, h2 {
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p, ul {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+span {
+    font-weight: bold;
+}

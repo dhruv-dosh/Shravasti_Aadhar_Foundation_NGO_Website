@@ -163,8 +163,11 @@ nav {
 .about {
     text-align: center;
     /* padding: 50px; */
+    display: flex;
+    justify-content: center; /* Horizontally centers */
+    align-items: center;
     z-index: 1;
-    height: 60vh;
+    height: 100vh;
 }
 
 .aboutcard {
