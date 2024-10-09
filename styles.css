@@ -504,9 +504,11 @@ footer {
         margin-top: 20vh;
         height: 50vh;
         padding: 10px;
+        margin-bottom: 10vh;
     }
     .contact-container{
         padding: 30px;
+        height: 100vh;
     }
 
     .nav-links.active {
@@ -568,7 +570,9 @@ footer {
     .about p, .projects p, .team p, .contact p, .donate p {
         width: 95%;
     }
-
+    .contact-container{
+        height: 100vh;
+    }
     .project-item {
         width: 100%;
     }
