@@ -18,7 +18,7 @@ nav {
     align-items: center;
     background-color: white;
     padding: 10px 20px;
-    position: fixed; /* Fixed position */
+    position: fixed; 
     top: 0; /* Stick to the top */
     left: 0;
     right: 0;
@@ -71,6 +71,9 @@ nav {
 
 /* Responsive Styles for the Nav */
 @media (max-width: 768px) {
+    nav{
+        position: relative;
+    }
     .nav-links {
         position: absolute;
         top: 60px;
@@ -417,6 +420,18 @@ nav {
 
 .donate-btn {
     margin-top: 10vh;
+    margin-bottom: 2vh;
+    background-color: #0a5e1c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.volunteer-btn{
     margin-bottom: 10vh;
     background-color: #0a5e1c;
     color: #fff;
@@ -429,7 +444,7 @@ nav {
     letter-spacing: 1px;
 }
 
-.donate-btn a {
+.donate-btn a,.volunteer-btn a {
     text-decoration: none; /* Removes the underline */
     color: inherit; /* Makes the link take the same color as the surrounding text */
     cursor: default; /* Removes the pointer cursor (optional) */
